@@ -1,5 +1,3 @@
-// http://pets-v2.dev-apis.com/breeds?animal=${animal}
-
 async function fetchBreed({ queryKey }) {
     const animal = queryKey[1];
 
