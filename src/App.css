@@ -188,7 +188,7 @@ header {
 }
 
 .search-params button,
-#modal button,
+.buttons button,
 #modal a,
 .details button {
   background-color: #ad343e;
@@ -202,21 +202,26 @@ header {
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  padding: 0 15%;
+}
+
 #modal a {
   display: inline-block;
   margin-right: 15px;
   text-decoration: none;
 }
 
-.search-params button:hover {
+button:hover {
   background-color: #122622;
 }
 
-.search-params button:active {
+button:active {
   background-color: #5f1d22;
 }
 
-.search-params button:focus {
+button:focus {
   border: 1px solid cornflowerblue;
 }
 
@@ -246,10 +251,6 @@ header {
   background: #faeff0;
 }
 
-#modal .buttons button {
-  display: inline-block;
-  margin-right: 15px;
-}
 
 @media only screen and (max-width: 1129px) {
   header {

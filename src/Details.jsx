@@ -28,7 +28,7 @@ function Details() {
                     {pet.animal} - {pet.breed} - {pet.city}, {pet.state}
                 </h2>
                 <button onClick={() => setOpen(!open)}>Adopt {pet.name}</button>
-                <ModalComp open={open} setOpen={setOpen} />
+                <ModalComp open={open} setOpen={setOpen} petName={pet.name}/>
                 <p>{pet.description}</p>
             </div>
             <Carousel pet={pet.images} />
