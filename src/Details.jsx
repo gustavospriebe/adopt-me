@@ -2,10 +2,13 @@ import { useParams } from "react-router-dom";
 import fetchPet from "./fetchPet";
 import { useQuery } from "@tanstack/react-query";
 import Carousel from "./Carousel";
+import { useState } from "react";
+import ModalComp from "./ModalComp";
 
 function Details() {
     const { id } = useParams();
     const results = useQuery(["details", id], fetchPet);
+    const [open, setOpen] = useState(false);
 
     if (results.isLoading) {
         return (
@@ -24,7 +27,8 @@ function Details() {
                 <h2>
                     {pet.animal} - {pet.breed} - {pet.city}, {pet.state}
                 </h2>
-                <button>Adopt {pet.name}</button>
+                <button onClick={() => setOpen(!open)}>Adopt {pet.name}</button>
+                <ModalComp open={open} setOpen={setOpen} />
                 <p>{pet.description}</p>
             </div>
             <Carousel pet={pet.images} />
