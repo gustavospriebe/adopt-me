@@ -1,9 +1,8 @@
-import { useState } from "react";
-import "./App.css";
-import SearchParams from "./SearchParams";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Details from "./Details";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Details from "./pages/Details";
+import SearchParams from "./pages/SearchParams";
 
 const queryClient = new QueryClient({
     defaultOptions: {

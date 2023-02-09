@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
-import fetchPet from "./fetchPet";
 import { useQuery } from "@tanstack/react-query";
-import Carousel from "./Carousel";
 import { useState } from "react";
-import ModalComp from "./ModalComp";
+import { useParams } from "react-router-dom";
+import Carousel from "../components/Carousel";
+import fetchPet from "../utils/fetchPet";
+import ModalComp from "../components/ModalComp";
 
 function Details() {
     const { id } = useParams();
